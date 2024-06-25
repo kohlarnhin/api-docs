@@ -26,8 +26,9 @@
     <!-- Extension points defined by the plugin.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
     <extensions defaultExtensionNs="com.intellij">
-        <applicationConfigurable id="apidocs" parentId="tools" instance="com.koh.apidocs.config.ApidocsConfigurable" displayName="apidocs配置"/>
-<!--        <projectConfigurable id = "myConfig" parentId="apidocs" instance="com.koh.apidocs.config.MyConfigurable" displayName="myconfig配置"/>-->
+        <!-- 注册设置页面 -->
+        <projectConfigurable parentId="tools" id="ApiDocs" instance="com.koh.apidocs.settings.ApiDocsConfigurable" displayName="ApiDocs"/>
+        <projectConfigurable parentId="ApiDocs" id="MyConfig" instance="com.koh.apidocs.settings.MyConfigConfigurable" displayName="ApiDocs.MyConfig"/>
     </extensions>
     <actions>
         <action id="ApiDocsGenerate" class="com.koh.apidocs.ApiDocsGenerate" text="api接口文档生成"

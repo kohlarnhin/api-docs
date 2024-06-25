@@ -4,9 +4,7 @@ import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.psi.PsiFile;
-import com.intellij.psi.util.PsiTreeUtil;
 import com.intellij.psi.PsiJavaFile;
-import com.intellij.psi.PsiClass;
 
 public class ApiDocsGenerate extends AnAction {
 

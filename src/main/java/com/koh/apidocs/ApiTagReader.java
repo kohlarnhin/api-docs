@@ -1,10 +1,12 @@
 package com.koh.apidocs;
 
 
-import com.intellij.psi.*;
+import com.intellij.psi.PsiAnnotation;
+import com.intellij.psi.PsiAnnotationMemberValue;
+import com.intellij.psi.PsiClass;
+import com.intellij.psi.PsiJavaFile;
 import com.intellij.psi.javadoc.PsiDocComment;
 import com.intellij.psi.util.PsiTreeUtil;
-import io.swagger.annotations.Api;
 
 import java.util.Optional;
 import java.util.regex.Matcher;
