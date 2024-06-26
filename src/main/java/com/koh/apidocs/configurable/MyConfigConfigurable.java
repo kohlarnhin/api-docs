@@ -1,4 +1,4 @@
-package com.koh.apidocs.settings;
+package com.koh.apidocs.configurable;
 
 import com.intellij.openapi.options.Configurable;
 import org.jetbrains.annotations.Nls;
@@ -12,9 +12,8 @@ public class MyConfigConfigurable implements Configurable {
     @Nls
     @Override
     public String getDisplayName() {
-        return "MyConfig";
+        return "";
     }
-
     @Nullable
     @Override
     public JComponent createComponent() {

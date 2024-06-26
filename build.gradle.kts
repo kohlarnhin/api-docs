@@ -5,8 +5,17 @@ plugins {
 }
 
 dependencies {
-    implementation("io.swagger:swagger-annotations:1.6.2")
-    // 其他依赖...
+    implementation("io.swagger:swagger-annotations:1.6.14")
+    // lombok
+    implementation("org.projectlombok:lombok:1.18.32")
+    // lombok 依赖的注解处理器
+    annotationProcessor("org.projectlombok:lombok:1.18.32")
+    // reflections
+    implementation("org.reflections:reflections:0.10.2")
+    // TODO idea 没有这个依赖 后续再看
+    //问题在于运行中可以通过反射拿到这个com.intellij:openapi里面的
+    //但是直接运行就不可以，会报错误 没有com.intellij:openapi里面的
+//    implementation("com.intellij:openapi:241.17890.1")
 }
 
 
@@ -18,6 +27,7 @@ repositories {
     maven {
         url = uri("https://maven.aliyun.com/repository/public")
     }
+    mavenCentral()
 }
 
 // Configure Gradle IntelliJ Plugin
