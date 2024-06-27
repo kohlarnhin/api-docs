@@ -29,9 +29,8 @@
         <!-- 注册设置页面 -->
         <!--projectConfigurable是项目级别的，也就是说每个项目有各自的配置-->
         <!--applicationConfigurable是应用级的，也就是说所有项目共享一个配置-->
-        <projectConfigurable parentId="tools" id="ApiDocs" instance="com.koh.apidocs.configurable.ApiDocsConfigurable" displayName="ApiDocs"/>
-        <projectConfigurable parentId="ApiDocs" id="MyConfig" instance="com.koh.apidocs.configurable.MyConfigConfigurable" displayName="MyConfig"/>
-        <projectConfigurable parentId="ApiDocs" id="TestConfig" instance="com.koh.apidocs.configurable.TestConfigurable" displayName="TestConfig"/>
+        <projectConfigurable parentId="tools" id="ApiDocs" instance="com.koh.apidocs.configurable.ApiDocsConfigurable"
+                             displayName="ApiDocs" dynamic="true"/>
     </extensions>
     <actions>
         <action id="ApiDocsGenerate" class="com.koh.apidocs.ApiDocsGenerate" text="api接口文档生成"
